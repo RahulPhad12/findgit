@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Malar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+  --white: #FFFFFF;
+  --dark: #DBE2EF;
+  --navy-blue: #393E46;
+  --dark-blue: #00ADB5;
+  --blue: #71C9CE;
+}
+body{
+  background-color: #DBE2EF;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(289,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23DBE2EF'/%3E%3Cstop offset='1' stop-color='%2300ADB5'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1' gradientTransform='rotate(191,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%2371C9CE' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2371C9CE' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2' gradientTransform='rotate(0,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%2371C9CE' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2371C9CE' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg %3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0px;
+}
+
+h6, h5, h4, h3, h2, h1, p {
+  font-family: 'Mukta Malar', sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.brand{
+  font-size: 64px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
+}
+
+
+main > .card {
+  width: 97vw;
+  max-width: 520px;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.search > form > button {
+  width: 5rem;
+  background-color: var(--blue);
+  border-color: var(--blue);
+  font-family: 'Mukta Malar', sans-serif;
+  font-size: 14px;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+
+.search > form > button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.gits{
+  display: inline-block;
+  position: absolute;
+  left: 100px;
+  top: 500px;
+  transform: rotate(330deg);
+  opacity: 0.2;
+}
+
+
+.search_icon{
+  display: inline-block;
+  position: absolute;
+  right: 100px;
+  top: 300px;
+  opacity: 0.7;
+}
+
+@media only screen and (max-width:980px) {
+  .gits{
+    display: none;
+  }
+
+  .search_icon{
+    display: none;
+  }
+  
+}
+
+.search > form > input {
+  width: calc(100% - 10rem);
+  margin-right: 2rem;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #e7e7e7;
+}
+
+.search > form > input:focus {
+  outline-color: var(--dark-blue);
+}
+
+
+.detail > img {
+  border-radius: 50%;
+  width: 10rem;
+  margin: 0.5rem;
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.section-right {
+  display: inline-block;
+  margin: 2.3rem 0.5rem 0px; /* top | horizontal (left, right) | bottom */
+  vertical-align: top;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons > button {
+  width: 10rem;
+  padding: 0.5rem 0px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s linear;
+  border-radius: 2px;
+}
+
+.buttons > button > span {
+  display: block;
+  font-weight: bold;
+}
+
+.buttons > button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.detail a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.detail a:visited {
+  color: purple;
+}
+
+.incorrect {
+  color: red;
+}
+
+.incorrect-input {
+  outline-color: red !important;
+  border-color: red !important;
+  border-style: solid;
+}
+
+.active {
+  outline: 3px solid var(--blue) !important;
+}
+
+.following-list img, .followers-list img  {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.repo-list th {
+  text-align: left;
+}
+
+.load-more {
+  margin-top: -2.5rem;
+}
+
+.load-more button { 
+  width: 100%;
+  padding: 5px 0px;
+  background-color: transparent;
+  border: 2px solid var(--blue);
+  cursor: pointer;
+  transition: all 0.15s linear;
+  border-radius: 2px;
+}
+
+.load-more button:hover {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.footer {
+  text-align: center;
+}
+
+.repo{
+  text-decoration: none;
+  color: #3D3C3A;
+  font-family: 'Rubik', sans-serif;
+}
+
+.repo:hover{
+  color: #82CAFF;
+}
